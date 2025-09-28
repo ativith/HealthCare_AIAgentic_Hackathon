@@ -37,7 +37,7 @@ Activate Environtment
 source venv/bin/activate
 Install Dependencies
 
-pip install -r requirments.txt
+```pip install -r requirments.txt```
 if this have issue you can install
 
 pip install chromadb
