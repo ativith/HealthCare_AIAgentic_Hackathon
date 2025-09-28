@@ -27,7 +27,9 @@ This project integrates **Retrieval-Augmented Generation (RAG)** for policy-rela
 
 ### 1. Create Virtual Environment  
 
-```python3 -m venv .venv```
+```
+python3 -m venv .venv
+```
 
 
 ### 2. Activate Environment
