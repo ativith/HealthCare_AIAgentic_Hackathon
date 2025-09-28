@@ -1,64 +1,86 @@
-🏥 Healthcare AI Agent Chatbot
+# 🏥 Healthcare AI Agent Chatbot  
 
-An AI-powered healthcare assistant that helps patients and staff access reliable information about health insurance, state welfare, and hospital services.
-This project integrates Retrieval-Augmented Generation (RAG) for policy-related queries and an MCP server for hospital-specific data (e.g., doctor schedules, appointments, patient history).
+An AI-powered healthcare assistant that helps patients and staff access reliable information about **health insurance, state welfare, and hospital services**.  
+This project integrates **Retrieval-Augmented Generation (RAG)** for policy-related queries and an **MCP server** for hospital-specific data (e.g., doctor schedules, appointments, patient history).  
 
-🚀 Features
+---
 
-Health Insurance & Welfare Support
+## 🚀 Features  
 
--Answers questions about national/state welfare programs.
+### 🔹 Health Insurance & Welfare Support  
+- Answers questions about national/state welfare programs.  
+- Provides information about insurance policies and coverage.  
+- Powered by **RAG** with policy datasets.  
 
--Provides information about insurance policies and coverage.
+### 🔹 Hospital Information Access  
+- Check **doctor work schedules**.  
+- Manage and query **patient appointment history**.  
+- Access patient records securely via **MCP server**.  
 
--Powered by RAG with policy datasets.
+### 🔹 AI Chat Interface  
+- Natural conversation powered by **LLMs**.  
+- Context-aware responses (public info + hospital data).  
 
-Hospital Information Access
+---
 
--Check doctor work schedules.
+## ⚙️ Get Started  
 
--Manage and query patient appointment history.
-
--Access patient records securely via MCP server.
-
-AI Chat Interface
-
--Natural conversation powered by LLMs.
-
--Context-aware responses (public info + hospital data).
-
-
-GET STARTED
-Create Virture environtment
-
+### 1. Create Virtual Environment  
+```bash
 python3 -m venv .venv
-Activate Environtment
+2. Activate Environment
+bash
+Copy code
+# Linux / macOS
+source .venv/bin/activate
 
-source venv/bin/activate
-Install Dependencies
+# Windows (PowerShell)
+.venv\Scripts\Activate
+3. Install Dependencies
+bash
+Copy code
+pip install -r requirements.txt
+If this has issues, install manually:
 
-```pip install -r requirments.txt```
-if this have issue you can install
-
+bash
+Copy code
 pip install chromadb
 pip install langchain-community
 pip install openai
 pip install pypdf
 pip install python-dotenv
 pip install pydantic
-Run server
-
+4. Run Server
+bash
+Copy code
 uvicorn main:app --host 0.0.0.0 --port 8000
-Server will run on port 8000 and you can use RAG API with this request
+The server will run on port 8000.
 
-curl -X POST http://localhost:5000/rag \
+📡 Using the RAG API
+Example with curl:
+bash
+Copy code
+curl -X POST http://localhost:8000/rag \
     -H "Content-Type: application/json" \
     -d '{"question": "your-question"}'
-or using Postman you can sent JSON like this
-
+Example JSON body for Postman:
+json
+Copy code
 {
-    "question" : "your-quesion"
+  "question": "your-question"
 }
-you can run rag alone without api call by
+🧩 Run RAG Standalone
+You can also run RAG without API calls:
 
+bash
+Copy code
 python service/rag.py
+⚠️ Disclaimer
+This project is for informational and administrative purposes only.
+It does not provide medical diagnoses or professional healthcare advice.
+Always consult a licensed healthcare provider for medical concerns.
+
+yaml
+Copy code
+
+---
