@@ -44,7 +44,9 @@ source .venv/bin/activate
 ```
 
 ###3. Install Dependencies
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 ###4.Run Server
 ```uvicorn main:app --host 0.0.0.0 --port 8000```
