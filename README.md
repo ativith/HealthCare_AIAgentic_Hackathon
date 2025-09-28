@@ -26,61 +26,42 @@ This project integrates **Retrieval-Augmented Generation (RAG)** for policy-rela
 ## ⚙️ Get Started  
 
 ### 1. Create Virtual Environment  
-```bash
-python3 -m venv .venv
-2. Activate Environment
-bash
-Copy code
+
+```python3 -m venv .venv```
+
+
+### 2. Activate Environment
 # Linux / macOS
-source .venv/bin/activate
+```source .venv/bin/activate```
 
 # Windows (PowerShell)
-.venv\Scripts\Activate
-3. Install Dependencies
-bash
-Copy code
-pip install -r requirements.txt
-If this has issues, install manually:
+```.venv\Scripts\Activate```
 
-bash
-Copy code
-pip install chromadb
-pip install langchain-community
-pip install openai
-pip install pypdf
-pip install python-dotenv
-pip install pydantic
-4. Run Server
-bash
-Copy code
-uvicorn main:app --host 0.0.0.0 --port 8000
-The server will run on port 8000.
+###3. Install Dependencies
+```pip install -r requirements.txt```
 
-📡 Using the RAG API
-Example with curl:
-bash
-Copy code
+###4.Run Server
+```uvicorn main:app --host 0.0.0.0 --port 8000```
+
+## 📡 Using the RAG API  
+
+### Example with `curl`:  
+```
 curl -X POST http://localhost:8000/rag \
     -H "Content-Type: application/json" \
-    -d '{"question": "your-question"}'
+    -d '{"question": "your-question"}
+```
 Example JSON body for Postman:
-json
-Copy code
+```
 {
   "question": "your-question"
 }
+```
+
 🧩 Run RAG Standalone
+
 You can also run RAG without API calls:
-
-bash
-Copy code
+```
 python service/rag.py
-⚠️ Disclaimer
-This project is for informational and administrative purposes only.
-It does not provide medical diagnoses or professional healthcare advice.
-Always consult a licensed healthcare provider for medical concerns.
 
-yaml
-Copy code
-
----
+```
